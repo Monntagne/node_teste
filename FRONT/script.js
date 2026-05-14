@@ -10,7 +10,7 @@ function listarPedidos() {
   //Faz a requisição GET para a API com a URL dela publicada (ou local)
   fetch("https://node-teste-ri2z.onrender.com/pedidos")
     //Converte a resposta da API para JSON
-    .then((res) => res.JSON())
+    .then((res) => res.json())
 
     //Vamos trabalhar com o resultado da API
     .then((resultado) => {
@@ -48,7 +48,7 @@ function cadastrarPedido() {
       method: "POST",
       //Informa que os dados enviados estão em JSON
       headers: {
-        "Content-Type": "application/JSON",
+        "Content-Type": "application/json",
       },
       //COnverte o objeto Javascript em JSON para enviar no body
       body: JSON.stringify({
@@ -96,7 +96,7 @@ function atualizarPedido(){
 fetch("https://node-teste-ri2z.onrender.com/pedidos",{
     method: "PUT", 
     headers: {
-         "Content-Type": "application/JSON",
+         "Content-Type": "application/json",
     },
     body: JSON.stringify({
         id: id,
