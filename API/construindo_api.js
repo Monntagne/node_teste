@@ -18,14 +18,14 @@ let pedidos = [
 ];
 
 const server = http.createServer((req, res) => {
-  res.setHeader("Content-Type", "application/JSON");
+  res.setHeader("Content-Type", "application/json");
 
   const urlCompleta = url.parse(req.url, true);
 
   const rota = urlCompleta.pathname;
   const metodo = req.method;
-res.setHeader("Access-Control-Allow-Origion","*");
-res.setHeader("Access-Control-Allow-Methds", "GET POST, PUT, DELETE, OPTIONS")
+res.setHeader("Access-Control-Allow-Origin", "*");
+res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
 res.setHeader("Access-Control-Allow-Headers", "Content-Type")
 if (metodo === "OPTIONS"){
     res.statusCode = 204;
@@ -88,7 +88,7 @@ if (metodo === "OPTIONS"){
             status: dados.status,
           };
         }
-        return;
+        return pedido;
       });
       if (!encontrado) {
         res.statusCode = 404;
@@ -102,7 +102,7 @@ if (metodo === "OPTIONS"){
       res.end(
         JSON.stringify({
           Mensagem: "Pedido atualizado com sucesso",
-          daos: pedidos,
+          dados: pedidos,
         }),
       );
     });

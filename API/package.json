@@ -2,7 +2,7 @@
   "name": "node",
   "version": "1.0.0",
   "description": "",
-  "main": "pedidos.js",
+  "main": "construindo_api.js",
   "scripts": {
     "start": "node construindo_api.js"
   },

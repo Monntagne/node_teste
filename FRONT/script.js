@@ -148,5 +148,4 @@ function removerPedido() {
         alert("Erro ao deletar pedido");
     });
 
-    listarPedidos()
 }
