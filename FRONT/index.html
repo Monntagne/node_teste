@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerenciador de pedidos - API</title>
+</head>
+<body>
+    
+<div class="container">
+    <h1>Sistema de Pedidos</h1>
+
+<!-- Novo pedido -->
+    <h2>Novo Pedido</h2>
+    <input type="text" id="cliente" placeholder="Nome do Cliente">
+    <input type="text" id="produto" placeholder="Produto">
+    <button onclick="cadastrarPedido()">Cadastrar Pedido</button>
+
+<!-- Atualização-->
+
+<h2>Atualizar Pedido</h2>
+<input type="number" id="idAtualizar" placeholder="ID Pedido">
+<input type="text" id="statusAtualizar" placeholder="Novo Status">
+<button onclick="atualizarPedido()">Atualizar </button>
+
+<!-- Ecluir pedido -->
+<h2>Cancelar Pedido</h2>
+<input type="number" id="idRemover"  placeholder="ID do Pedido">
+<button onclick="removerPedido()">Cancelar</button>
+
+<!-- Lista de pedidos -->
+<h2> Lista de pedidos </h2>
+<ul id="lista">Carregando pedidos...</ul>
+
+</div>
+
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

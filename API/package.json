@@ -1,0 +1,12 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pedidos.js",
+  "scripts": {
+    "start": "node construindo_api.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
