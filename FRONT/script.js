@@ -8,7 +8,7 @@ function listarPedidos() {
 
   //Aqui vai a URL precisa substituir xxxx pela URL
   //Faz a requisição GET para a API com a URL dela publicada (ou local)
-  fetch(xxxx)
+  fetch("https://node-teste-ri2z.onrender.com/pedidos")
     //Converte a resposta da API para JSON
     .then((res) => res.JSON())
 
@@ -43,7 +43,7 @@ function cadastrarPedido() {
   const cliente = document.getElementById("cliente").value;
   const produto = document.getElementById("produto").value;
 
-  (fetch(xxxxxxx,
+  (fetch("https://node-teste-ri2z.onrender.com/pedidos",
     {
       method: "POST",
       //Informa que os dados enviados estão em JSON
@@ -93,7 +93,7 @@ function atualizarPedido(){
     const status = document.getElementById("statusAtualizar").value;
 
     //Envia uma requisição PUT para a API   
-fetch(xxxxxxxxxxxxx,{
+fetch("https://node-teste-ri2z.onrender.com/pedidos",{
     method: "PUT", 
     headers: {
          "Content-Type": "application/JSON",
@@ -123,7 +123,7 @@ function removerPedido() {
     const id = Number(document.getElementById("idRemover").value);
 
     //Envia uma requisição DELETE para a API
-    fetch(xxxxxxxxxxx, {
+    fetch("https://node-teste-ri2z.onrender.com/pedidos", {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",
